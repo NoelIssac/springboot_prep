@@ -1,0 +1,19 @@
+public class ToDoService() {
+ TodoServiceImpl service = new TodoDataServiceImpl();
+}
+
+
+@Component
+public class TodoBusinessService {
+
+    @Autowired
+    TodoDataService dataService;
+
+    public TodoBusinessService(TodoDataService dataService) {
+        this.dataService = dataService;
+    }
+}
+
+public interface TodoDataService {
+    List<String> retrieveTodos(String user);
+}

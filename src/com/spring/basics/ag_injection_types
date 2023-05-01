@@ -1,0 +1,40 @@
+Setter Injection and Constructor Injection
+
+Setter Injection
+-----------------
+@Component
+public class TodoBusinessService {
+    TodoDataService dataService;
+
+    @Autowired
+    public void setDataService(TodoDataService dataService) {
+        this.dataService = dataService;
+    }
+}
+
+// Using Reflection
+public class TodoBusinessService {
+    @Autowired
+    TodoDataService dataService;
+}
+
+Constructor Injection
+---------------------
+@Component
+public class TodoBusinessService {
+
+    @Autowired
+    TodoDataService dataService;
+
+    public TodoBusinessService(TodoDataService dataService) {
+        super();
+        this.dataService = dataService;
+    }
+}
+
+
+Spring team advocates Constructor injection
+1. Promotes immutability coz setter injection can be called again and again
+by calling the set methods again and again.
+2. WHen too many dependencies in construction shows that there is a code smell
+and calls for refactoring

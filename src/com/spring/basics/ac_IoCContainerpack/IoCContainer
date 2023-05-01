@@ -1,0 +1,29 @@
+Work of IoC Container:
+Find beans
+Wire dependencies
+Manage lifecycle of the bean
+
+----------------------------------------------------------------
+@Component
+public class ComplexAlgoImpl {
+    @Autowired
+    private SortAlgorithm SortAlgorithm;
+}
+
+@Component
+public class QuicSortAlgorithm implements SortAlgorithm {
+
+public interface SortAlgorithm {
+    public int[] Sort(int[] numbers);
+}
+--------------------------------------------------------------------
+
+1. Identify the beans to create instance of them. complexalgo and quciksort algo
+2. Then created dependencies
+3. then manages them till theya re destroyed
+
+
+2 Concepts associated with this are Application context and Bean Factory -> both of thema re types of IoC container
+
+
+Apps use BeanFactory when severe memory Constraint else use application context

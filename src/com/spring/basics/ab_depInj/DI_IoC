@@ -1,0 +1,19 @@
+public class ComplexAlgo {
+    BubbleSortAlgo algo = new BubbleSortAlgo();
+}
+
+
+@Component
+public class ComplexAlgo {
+
+    @Autowired
+    private SortAlgo sortALgo;
+
+}
+
+
+Dep Injection  -> The creation of the object is delegated to the Spring framework
+
+Inv of Control -> The control of creation of the object is moved from the class to the user
+calling the class or the spring framework
+

@@ -1,0 +1,14 @@
+ scope of bean
+singleton  - one instance - default scope
+prototype - create a new instance whenever request for it comes
+request - web app context. One bean per HTTP request.
+session - web app context. One bean per HTTP request.
+
+how singleton pattern instance and bean differs?
+one and only one instance per class loader
+Spring singleton is one instance of bean per container
+(one instance per application context)
+
+we use @scope annotation to define the scope
+---------------------------------------------------------------------
+Spring beans are not thread safe by default

@@ -1,0 +1,37 @@
+
+@Component
+public class ComplexAlgoImpl {
+    @Autowired
+    private SortAlgorithm sortAlgorithm;
+}
+
+public interface SortAlgorithm {
+    public int[] Sort(int[] numbers);
+
+@Component
+public class QuickSortAlgorithm implements SortAlgorithm {
+
+@Component
+public class BubbleSortAlgorithm implements SortAlgorithm {
+
+DSpring now cannot match by Type or Name since there are 2 beans defined for
+1 autowire
+So we get NoUniqueBeanDefinitionException
+
+to resolve this
+1. we can use byName dependency Injection
+2. Defined @Primary
+3. We can use a qualifier
+eg
+public class ComplexAlgoImpl {
+    @Autowired
+    @Qualifier("mainAlgorithm")
+    private SortAlgorithm sortAlgorithm;
+}
+public interface SortAlgorithm {
+    public int[] Sort(int[] numbers);
+@Component
+@Qualifier("mainAlgorithm")
+public class QuickSortAlgorithm implements SortAlgorithm {
+@Component
+public class BubbleSortAlgorithm implements SortAlgorithm {

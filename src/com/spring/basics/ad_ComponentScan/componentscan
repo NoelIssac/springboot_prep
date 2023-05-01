@@ -1,0 +1,17 @@
+using @componetScan(packagename)
+
+We use thee above annotation to help spring to search for the components
+
+@Configuration
+@ComponentScan(basePackages = {
+        "com.spring.basics.packagename})
+
+
+You can also1
+ use xml for configuration
+
+
+With Springbott
+using @SpringBootApplication
+
+@SpringBootTest

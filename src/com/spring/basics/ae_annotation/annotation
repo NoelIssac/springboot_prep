@@ -1,0 +1,12 @@
+@Component
+ generic component
+
+ @Repository - Data layer -> storage, retrieval and search behavior from DB
+ DAO
+
+@Service
+Business Layer
+
+@Controller
+mvc pattern
+

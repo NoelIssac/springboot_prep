@@ -1,0 +1,29 @@
+contains all features of Bean Factory
+String AOp
+I18n
+WebApplicationContext - Request session ands scopes
+
+How to create or define an application context
+@Configuration annotation
+use xml
+
+when xml we create it as
+ApplicationContext context =
+    new ClassPathCmlApplicationContext (
+    new String[] { "BusinessApplicationContext.xml",
+        "Other_Configuration.xml"});
+
+use java annotation
+
+@Configuration
+class SpringContext {
+}
+
+ApplicationContext cxt =
+    new AnnotationConfigApplicationContext(SpringContext.class)
+
+Unit Tests:
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = JavaTextContext.class)
+public class DepInjectionExample {
+

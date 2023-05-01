@@ -1,0 +1,64 @@
+byType
+byName
+Constructor
+
+
+byType - by class or interface
+--------
+if class it takes the class to autowire
+but if interfafce it takes implementation of that interface to autowire
+
+@Component
+public class ComplexAlgoImpl {
+    @Autowired
+    private SortAlgorithm SortAlgorithm;
+}
+
+@Component
+public class QuicSortAlgorithm implements SortAlgorithm {
+
+public interface SortAlgorithm {
+    public int[] Sort(int[] numbers);
+
+
+by Name - wjhen more than 2 implementations of interface, spring goes by name
+---------
+@Component
+public class ComplexAlgoImpl {
+    @Autowired
+    private SortAlgorithm quickSortAlgorithm;
+                          ---------------------
+}
+
+public interface SortAlgorithm {
+    public int[] Sort(int[] numbers);
+@Component
+public class QuickSortAlgorithm implements SortAlgorithm {
+
+Component
+public class BubbleSortAlgorithm implements SortAlgorithm {
+
+
+By Constructor - (Similar to byName)
+
+
+no Matching cComponents:
+-------------------------
+1. when @component annotation is not
+provided above components -> NoSuchBeanDefinitionException
+2. @ComponentScan not defined properly (we gave component scan scope
+as a package but defined the component in another package)
+
+@Component
+public class ComplexAlgoImpl {
+    @Autowired
+    private SortAlgorithm sortAlgorithm;
+}
+
+public interface SortAlgorithm {
+    public int[] Sort(int[] numbers);
+
+public class QuickSortAlgorithm implements SortAlgorithm {
+
+public class BubbleSortAlgorithm implements SortAlgorithm {
+
