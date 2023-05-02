@@ -1,4 +1,4 @@
-public class ToDoService() {
+public class TodoBusinessService {
  TodoServiceImpl service = new TodoDataServiceImpl();
 }
 
@@ -16,4 +16,16 @@ public class TodoBusinessService {
 
 public interface TodoDataService {
     List<String> retrieveTodos(String user);
+}
+
+
+public class ComplexAlgorithmImpl {
+    BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
+}
+
+public class ComplexAlgorithmImpl {
+
+    @Autowired
+    private sortAlgorithm sortAlgorithm;
+
 }
