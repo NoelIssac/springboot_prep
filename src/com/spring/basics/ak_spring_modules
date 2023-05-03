@@ -1,0 +1,21 @@
+web layer - business layer - data layer
+
+
+core container -> crux of spring
+Beans Core Context(app context) SpEL(Spring expression language)
+
+
+Data Layer
+Spring JDBC, JMS, Transactions, good integration with ORM (Hibernate)
+
+Web
+WebSocket
+Servlet
+RESTful apps
+
+Cross Cutting COncerns
+Logging
+AOP -Aspect Oriented Programiming (aspectJ)
+
+Spring Test
+

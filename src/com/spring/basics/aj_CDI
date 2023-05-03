@@ -1,0 +1,7 @@
+CDI - Contexts and Dependency Injection is a JAVA EE standard
+    Defines APIs for dependency injection
+JPA - Java Persistence Annotation - this is a standard which
+ defines few annotations and interaces to use to implement object relational mapping
+
+
+Spring supports CDI

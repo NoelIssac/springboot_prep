@@ -1,0 +1,9 @@
+The base spring framework contains modlues as we saw before
+
+It contains some spring projects - provides solutions for different problems for entrprise applciation
+springboot - famous framework for developing microservices application
+springcloud - ca use this to cloud enable microservices
+SpringData - Consistent data access for different DBs
+Spring Integration - helps us in integrating enterprise applications
+SpringBatch - provides features for dev batch applications
+Spring;Security -
